@@ -11,7 +11,7 @@ const aboutMessage = async (senderID) =>
    {
       await client.messages.create
       ({
-         from: `whatsapp:+14155238886`,
+         from: process.env.TWILIO_WHATSAPP_NUMBER,
          body: 'Email Alerts',
          to: senderID
       });
